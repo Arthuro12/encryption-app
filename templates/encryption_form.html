@@ -1,0 +1,28 @@
+{% with page_title="Verschlüsselung" %}
+{% include "bootstrap_template.html" %}
+{% endwith %}
+<script async src="../static/js/showInputVector.js"></script>
+{% include "header_postconnection.html" %}
+<div class="ctn-main">
+    <div class="text-center">
+        <h2>Sie befinden sich unter dem Menü Verschlüsselung</h2>
+        <p>
+            Hier können Sie Texte entweder mithilfe der Caesar- oder
+            der monoalphabetische Verschlüsselung verschlüsseln lassen
+        </p>
+    </div>
+    <form action="{{ url_for('blueprint.render_encryption_form') }}" method="post" id="encryption-form">
+        <div class="mb-3">
+            <label for="{{ form.encryption_type.id }}" class="form-label">Verschlüsselungsart auswählen: </label>
+            {{ form.encryption_type(class="form-select") }}
+            <br />
+            <div id="ctn-vector" class="mb-3">
+                <label for="{{ form.vector.id }}">Schlüssel der Caesar-Verschlüsselung <span class="fw-light">(optional): </span></label>
+                {{ form.vector(class="form-control") }}
+            </div>
+            {{ form.plain_text(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Zeichenkette verschlüsseln</button>
+    </form>
+</div>
+{% include "footer.html" %}

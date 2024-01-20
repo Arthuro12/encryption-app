@@ -1,0 +1,2 @@
+class MonoAlphaCypherDTO:
+    pass

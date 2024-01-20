@@ -1,0 +1,56 @@
+body {
+  width: 750px;
+  margin: auto;
+}
+
+/* Header */
+
+.header-postconnection > .navbar > .container-fluid > .collapse > .navbar-nav {
+  margin-left: 12rem;
+}
+
+/* Nav */
+
+.collapse {
+  margin-left: 3rem;
+}
+
+/* Main section */
+
+.ctn-main {
+  margin-top: 2rem;
+}
+
+/* Form */
+
+form {
+  width: 400px;
+  margin: auto;
+}
+
+label {
+  margin-bottom: 1rem;
+}
+
+.ctn-error {
+  margin-top: 1rem;
+}
+
+.ctn-error p {
+  color: red;
+}
+
+.btn-logout {
+  margin-left: 29rem;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 15rem;
+}
+
+.ctn-footer {
+  display: flex;
+  justify-content: space-between;
+}

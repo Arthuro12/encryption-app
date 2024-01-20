@@ -1,0 +1,31 @@
+{% with page_title="Registrierung" %}
+   {% include "bootstrap_template.html" %}
+{% endwith %}
+{% include "header_preconnection.html" %}
+<div class="ctn-main">
+    <form action="{{ url_for('blueprint.render_register_form') }}" method="post">
+        <fieldset>
+            <div class="ctn-form">
+                <div class="mb-3">
+                    <label for="{{ form.username.id }}" class="form-label">Benutzername</label><br />
+                    {{ form.username(class="form-control") }}
+                    <div class="ctn-error">
+                        {% with messages = get_flashed_messages(category_filter=["USERNAME_TAKEN"]) %}
+                        {% if messages %}
+                        <p>
+                            {{ messages[0] }}
+                        </p>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.password.id }}" class="form-label">Passwort</label><br />
+                    {{ form.password(class="form-control") }}
+                </div>
+                <button type="submit" id="btn-login" class="btn btn-primary">Registrieren</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% include "footer.html" %}

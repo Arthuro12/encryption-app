@@ -1,0 +1,15 @@
+{% with page_title="Ergebnisseite" %}
+{% include "bootstrap_template.html" %}
+{% endwith %}
+{% include "header_postconnection.html" %}
+<div class="ctn-main">
+ {% if vector is defined %}
+ <h1>Ergebnis der Caesar-Verschlüsselung</h1>
+ <h4>Schlüssel: {{ vector }}</h4>
+ {% else %}
+ <h1>Ergebnis der monoalphabetischen Substitution</h1>
+ {% endif %}
+ <p>Der verschlüsselte Text ist:</p>
+ <pre>{{ result }}</pre>
+</div>
+{% include "footer.html" %}

@@ -1,0 +1,11 @@
+{% include "bootstrap_template.html" %}
+<div class="ctn-main">
+  <h2>
+    403 Error
+  </h2>
+  <p>
+    Sie dürfen auf diese Seite nicht zugreifen.
+    <br />
+    Wenn Sie auf die Seite zugreifen wollen, <a href="{{ url_for('blueprint.render_login_form') }}">melden Sie sich bitte an</a>.
+  </p>
+</div>

@@ -1,0 +1,14 @@
+{% with page_title="Startseite" %}
+   {% include "bootstrap_template.html" %}
+{% endwith %}
+{% if connected %}
+   {% include "header_postconnection.html" %}
+{% else %}
+  {% include "header_preconnection.html" %}
+{% endif %}
+<div class="ctn-main">
+    <p>
+        Willkomen auf Unserer Webseite. <a href="{{ url_for('blueprint.render_encryption_form') }}">Hier können Sie Texte verschlüsselt lassen</a>.
+    </p>
+</div>
+{% include "footer.html" %}

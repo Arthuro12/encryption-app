@@ -1,0 +1,16 @@
+{% with page_title="Anmeldung" %}
+   {% include "bootstrap_template.html" %}
+{% endwith %}
+{% include "header_postconnection.html" %}
+<div class="ctn-main">
+    <ul>
+        {% if usernames %}
+        {% for username in usernames %}
+        <li>
+            {{ username }}
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+</div>
+{% include "footer.html" %}

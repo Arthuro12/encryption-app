@@ -1,0 +1,10 @@
+{% with page_title="Startseite" %}
+   {% include "bootstrap_template.html" %}
+{% endwith %}
+{% include "header_postconnection.html" %}
+<div class="ctn-main">
+    <form action="{{ url_for('blueprint.render_logout_form') }}" method="post">
+        <input class="btn btn-primary btn-logout" type="submit" value="Abmelden">
+    </form>
+</div>
+{% include "footer.html" %}
